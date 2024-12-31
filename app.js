@@ -1,19 +1,19 @@
-const mon = "mon";
-const tue = "tue";
-const wed = "wed";
-const thu = "thu";
-const fri = "fri";
-const sat = "sat";
-const sun = "sun";
+const playerName = "nico";
+const playerPoint = 121212;
+const playerHandsome = false;
+const playerFat = "little bit";
 
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+const player1 = ["nico", 1212, false, "little bit"];
 
-console.log(daysOfWeek[4]);
+// Object
 
-daysOfWeek.push("sun");
-
-console.log(daysOfWeek);
-
-const nonsense = [1, 2, "hello", null, true, undefined, "nico"];
-
-console.log(nonsense);
+const player2 = {
+    name: "nico",
+    Points: 5,
+    fat: true
+};
+console.log(player2);
+console.log(player2.name);
+console.log(player2["name"]);
+player2.Points += 10;
+console.log(player2);
