@@ -1,19 +1,29 @@
-const playerName = "nico";
-const playerPoint = 121212;
-const playerHandsome = false;
-const playerFat = "little bit";
+function sayHello(nameOfPerson, age) {
+    console.log("Hello my name is " + nameOfPerson + " and i'm " + age);
+}
 
-const player1 = ["nico", 1212, false, "little bit"];
+sayHello("nico", 21);
+sayHello("dal", 40);
+sayHello("lynn", 15);
 
-// Object
+function plus(firstNumber, secondNumber) {
+    console.log(firstNumber + secondNumber);
+}
 
-const player2 = {
+function divide(a, b) {
+    console.log(a / b);
+}
+
+plus(8, 60);
+divide(98, 20);
+
+const player = {
     name: "nico",
-    Points: 5,
-    fat: true
+    sayHello: function(otherPersonName) {
+        console.log("hello, " + otherPersonName + "!");
+    }
 };
-console.log(player2);
-console.log(player2.name);
-console.log(player2["name"]);
-player2.Points += 10;
-console.log(player2);
+
+console.log(player.name);
+player.sayHello("lynn");
+player.sayHello("nico");
