@@ -1,32 +1,20 @@
-const age = 96;
-function calculateKrAge(ageOfForeigner) {
-    return ageOfForeigner + 2;
+const age = parseInt(prompt("How old are you?")); // NaN이 아니면 숫자 그 외에는 숫자 아님
+
+if(isNaN(age) || age < 0) {
+    console.log("Please write a number");
 }
-
-const KrAge = calculateKrAge(age);
-
-console.log(KrAge);
-
-const calculator = {
-    plus: function(a,b) {
-        return a + b;
-    },
-    minus: function(a,b) {
-        return a - b;
-    },
-    times: function(a,b) {
-        return a * b;
-    },
-    divide: function(a,b) {
-        return a / b;
-    },
-    power: function(a,b) {
-        return a ** b;
-    }
+else if(age < 18) {
+    console.log("You are too young");
 }
-
-const plusResult = calculator.plus(2, 3);
-const minusResult = calculator.minus(plusResult, 10);
-const timesResult = calculator.times(10, minusResult);
-const divideResult = calculator.divide(timesResult, plusResult);
-const powerResult = calculator.power(divideResult, minusResult);
+else if(age >= 18 && age <= 50) {
+    console.log("You can drink");
+}
+else if(age > 50 && age <= 80) {
+    console.log("You should exercise");
+}
+else if(age === 100) {
+    console.log("wow you are wise");
+}
+else if(age > 80) {
+    console.log("You cand do whatever you want");
+}
